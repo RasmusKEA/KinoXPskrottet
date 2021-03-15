@@ -16,7 +16,7 @@ public class RestController {
         this.movieRepository = movieRepository;
     }
 
-    @GetMapping("/movies")
+    @GetMapping("/getAllMovies")
     public List<Movie> findAllMovies(){
         List<Movie> movies = movieRepository.findAll();
         return movies;

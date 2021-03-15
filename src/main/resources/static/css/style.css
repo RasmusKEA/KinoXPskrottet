@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+body{
+font-family: 'Roboto', sans-serif !important; 
+}
+
+.logo{
+	border-radius: 10px;
+	font-weight: 700 !important;
+	font-style: italic !important;
+}
+
+.loginBtn{
+	border: 1px solid #871EC9 !important;
+	color: #871EC9;
+	background-color: transparent;
+	transition-duration: 0.5s;
+}
+
+.loginBtn:hover{
+	background-color: #871EC9;
+}

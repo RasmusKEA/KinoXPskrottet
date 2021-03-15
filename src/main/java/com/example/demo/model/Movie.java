@@ -1,0 +1,71 @@
+package com.example.demo.model;
+
+import javax.persistence.*;
+import java.util.Objects;
+
+@Entity
+public class Movie {
+    //Model til vores film
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String movieTitle;
+    private int releaseYear;
+    private String genre;
+
+    public Movie() {
+    }
+
+    public Movie(String movieTitle, int releaseYear, String genre) {
+        this.movieTitle = movieTitle;
+        this.releaseYear = releaseYear;
+        this.genre = genre;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Movie that = (Movie) o;
+        return id == that.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMovieTitle() {
+        return movieTitle;
+    }
+
+    public void setMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+}

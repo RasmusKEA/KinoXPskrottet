@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Login</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="#">
+        <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="" >
+        KINO XP
+    </a>
+    <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/movies">Movies</a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-4">
+        <br><br><br><br><br><br><br><br>
+        <div style="alignment: center">
+            <form method="post" action="/loginRequest">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Login">
+                <input formmethod="get" formaction="/register" type="submit" value="Register">
+            </form><br>
+        </div>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+</body>
+
+</html>

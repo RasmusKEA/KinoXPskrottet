@@ -23,7 +23,7 @@ public class BootStrapData implements CommandLineRunner {
 
 
         Movie movie1 = new Movie();
-        movie1.setMovieTitle("King kong vs Godzilla");
+        movie1.setMovieTitle("Godzilla vs Kong");
         movie1.setGenre("Dokumentar");
         movie1.setReleaseYear(2006);
         movie1.setImage("kongvsgodzilla.jpg");

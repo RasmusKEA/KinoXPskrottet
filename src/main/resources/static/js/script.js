@@ -2,22 +2,21 @@ let nowShowing = document.getElementById("nowShowing");
 let comingSoon = document.getElementById("comingSoon");
 document.getElementById("nowShowing").disabled = true;
 
-
 const requestObject = {
   method : "GET",
-  "conent-type" : "application/json",
+  "content-type" : "application/json",
   redirect : "follow"
 }
 
 function fetchMovies() {
   fetch('http://localhost:8080/getAllMovies', requestObject)
       .then(response => response.json())
-      .then(movies => showMovies(movies));
+      .then(movies => showMoviesShowing(movies));
 }
 
-window.onload = fetchMovies();
+fetchMovies();
 
-function showMovies(movies){
+function showMoviesShowing(movies){
   const movieDiv = document.querySelector('#test');
   movies.forEach(movie => {
     const movieElement = document.createElement('div');
@@ -33,8 +32,6 @@ function showMovies(movies){
     movieDiv.append(movieElement);
   });
 }
-
-
 
 nowShowing.onclick = function (){
   document.getElementById("nowShowing").disabled = true;

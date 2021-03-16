@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>KINO XP</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="#">
+        <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="" >
+        KINO XP
+    </a>
+    <div class="collapse navbar-collapse">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/movies">Movies</a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+    </div>
+    <form class="form-inline" action="/logout">
+        <button class="btn btn-outline-success my-2 my-sm-0 loginBtn" type="submit">Sign out</button>
+    </form>
+</nav>
+
+<div class="row">
+    <div class="col-lg-5"></div>
+    <div class="col-lg-3">
+        <div style="alignment: center">
+            <form method="get" action="/profile">
+                <label for="firstname">Firstname</label><br>
+                <input th:value="${UserModel.getFirstname}" type="text" id="firstname" name="firstname"><br><br>
+                <label for="surname">Surname</label><br>
+                <input th:value="${UserModel.getSurname}" type="text" id="surname" name="surname"><br><br>
+                <label for="birthday">Birthday</label><br>
+                <input th:value="${UserModel.getBirthday}" type="text" id="birthday" name="birthday"><br><br>
+                <label for="email">E-mail</label><br>
+                <input th:value="${UserModel.getEmail}" type="text" id="email" name="email"><br><br>
+                <label for="password">Password</label><br>
+                <input th:value="${UserModel.getPassword}" type="password" id="password" name="password"><br><br>
+            </form>
+            <br>
+            <br>
+            <form method="post" action="/deleteProfile">
+                <input type="submit" value="Delete Profile"/>
+                <input type="hidden" name="userID" th:value="${userIden.getUserID()}">
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-3"></div>
+
+</div>
+</body>
+</html>

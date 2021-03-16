@@ -26,6 +26,32 @@ font-family: 'Roboto', sans-serif !important;
 	background-color: #871EC9;
 }
 
+.kkvsgod{
+	background-position: center;
+	text-align: left;
+}
+
+.movies{
+	margin-top: 20px;
+}
+
+h1{
+	font-size: 30px;
+}
+
+button{
+	color: white;
+	border-radius: 100px;
+	background-color: blueviolet;
+	width: 140px;
+	height: 40px;
+}
+
+.IntroText{
+	margin-top: 20px;
+	font-size: medium;
+}
+
 .movieDiv{
 	display: flex;
 	flex-direction: row;
@@ -71,3 +97,4 @@ font-family: 'Roboto', sans-serif !important;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+

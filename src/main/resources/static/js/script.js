@@ -17,18 +17,33 @@ function fetchMovies() {
 fetchMovies();
 
 function showMoviesShowing(movies){
-  const movieDiv = document.querySelector('#test');
+  const movieDiv = document.querySelector('#movieRow');
+
   movies.forEach(movie => {
     const movieElement = document.createElement('div');
     const pTagTitle = document.createElement('p');
-    const pTagReleaseYear = document.createElement('p');
+    const pTagReleaseYear = document.createElement('span');
+    const imgTagPoster = document.createElement("IMG");
+    const genreTag = document.createElement('span');
 
     pTagTitle.innerText = movie.movieTitle;
     pTagReleaseYear.innerText = movie.releaseYear;
+    genreTag.innerText = movie.genre;
 
-    movieElement.style.paddingRight = '100px';
-    movieElement.append(pTagTitle);
+    imgTagPoster.setAttribute("src", `../images/${movie.image}`);
+    imgTagPoster.setAttribute("width", "80");
+    imgTagPoster.setAttribute("height", "120");
+    imgTagPoster.style.paddingTop = "5px";
+
+    movieElement.className = "movieElement";
+    genreTag.className = "genreTag";
+    pTagReleaseYear.className = "releaseYear";
+
+
+    movieElement.append(imgTagPoster);
     movieElement.append(pTagReleaseYear);
+    movieElement.append(genreTag);
+    movieElement.append(pTagTitle);
     movieDiv.append(movieElement);
   });
 }
@@ -42,7 +57,7 @@ nowShowing.onclick = function (){
 comingSoon.onclick = function (){
   document.getElementById("nowShowing").disabled = false;
   document.getElementById("comingSoon").disabled = true;
-  document.querySelector('#test').innerHTML = "";
+  document.querySelector('#movieRow').innerHTML = "";
 }
 
 

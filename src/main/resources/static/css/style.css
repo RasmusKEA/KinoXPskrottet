@@ -21,13 +21,39 @@ font-family: 'Roboto', sans-serif !important;
 	background-color: #871EC9;
 }
 
-.test{
+.movieDiv{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	width: 40%;
+}
 
+.movieBtnDiv{
+	padding-top: 15px;
 }
 
 .singleMovie{
 	display: inline-block;
+}
+
+.movieElement{
+	width: 150px;
+	height: 225px;
+	text-align: center;
+	margin: 10px;
+	border: 1px solid #871EC9;
+	border-radius: 5px;
+}
+
+.genreTag{
+	font-size: 12px;
+	background-color: rgba(211,211,211, 0.3);
+	border-radius: 5px;
+	width: 110%;
+
+}
+
+.releaseYear{
+	font-size: 12px;
+	padding-right: 5px;
 }

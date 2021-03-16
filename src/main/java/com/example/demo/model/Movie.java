@@ -14,14 +14,24 @@ public class Movie {
     private String movieTitle;
     private int releaseYear;
     private String genre;
+    private String image;
 
     public Movie() {
     }
 
-    public Movie(String movieTitle, int releaseYear, String genre) {
+    public Movie(String movieTitle, int releaseYear, String genre, String image) {
         this.movieTitle = movieTitle;
         this.releaseYear = releaseYear;
         this.genre = genre;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override

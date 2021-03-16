@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.Objects;
 
 @Entity
@@ -11,24 +12,25 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstName;
+    private String firstname;
     private String surname;
-    private int birthday;
+    private Date birthday;
     private String username;
     private String email;
     private String password;
 
-    public UserModel() {
 
-    }
-
-    public UserModel(String firstName, String surname, int birthday, String username, String email, String password) {
-        this.firstName = firstName;
+    public UserModel(String firstname, String surname, Date birthday, String username, String email, String password) {
+        this.firstname = firstname;
         this.surname = surname;
         this.birthday = birthday;
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public UserModel() {
+
     }
 
 
@@ -53,12 +55,12 @@ public class UserModel {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstName) {
+        this.firstname = firstName;
     }
 
     public String getSurname() {
@@ -69,11 +71,11 @@ public class UserModel {
         this.surname = surname;
     }
 
-    public int getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(int birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
@@ -100,4 +102,7 @@ public class UserModel {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
+
+

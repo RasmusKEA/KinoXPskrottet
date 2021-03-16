@@ -10,6 +10,11 @@ font-family: 'Roboto', sans-serif !important;
 	font-style: italic !important;
 }
 
+.btn:focus{
+	outline: none;
+	box-shadow: none;
+}
+
 .loginBtn{
 	border: 1px solid #871EC9 !important;
 	color: #871EC9;
@@ -37,8 +42,10 @@ font-family: 'Roboto', sans-serif !important;
 }
 
 .movieElement{
-	width: 150px;
-	height: 225px;
+	width: 175px;
+	max-width: 175px;
+	height: 275px;
+	max-height: 275px;
 	text-align: center;
 	margin: 10px;
 	border: 1px solid #871EC9;
